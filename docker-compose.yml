@@ -1,0 +1,12 @@
+# Python3 on Alpine
+version: '3'
+services:
+ web:
+  build: .
+  volumes:
+    - "python_data:/app"
+  ports:
+    - "5000:5000"
+volumes:
+  python_data:
+     driver: local
